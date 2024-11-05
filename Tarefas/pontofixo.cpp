@@ -9,13 +9,13 @@ double func(double x){
 }
 
 int main(){
-    double val, newval, inter;
-    cout << "Digite o valor inicial e o erro: ";
-    cin >> val >> inter;
+    double val, newval, tol;
+    cout << "Digite o valor inicial e a tolerancia: ";
+    cin >> val >> tol;
 
     for (int i = 0; i < MAXIT; i++){
         newval = func(val);
-        if (fabs(newval - val) < inter){
+        if (fabs(newval - val) < tol){
             break;
         }
         val = newval;
